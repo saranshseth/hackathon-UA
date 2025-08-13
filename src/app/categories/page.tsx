@@ -507,7 +507,7 @@ function HeroSection() {
           {/* Content Section */}
           <div>
             <h1 className="text-5xl font-medium text-gray-900 pt-6">
-              Explore Melbourne
+              Food & Drink
             </h1>
             <div className="max-w-md mb-12">
               <p className="text-base md:text-lg text-gray-700 leading-relaxed px-[0px] py-[15px] mx-[0px] my-[29px]">
