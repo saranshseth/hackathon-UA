@@ -12,6 +12,9 @@ const nextConfig = {
     unoptimized: true,
     domains: ['images.unsplash.com', 'via.placeholder.com'],
   },
+  experimental: {
+    missingSuspenseWithCSRBailout: false,
+  },
 }
 
 module.exports = nextConfig
