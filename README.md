@@ -91,3 +91,7 @@ See `.env.local.example` for all available environment variables.
 - `npm run build` - Build for production
 - `npm run start` - Start production server
 - `npm run lint` - Run ESLint
+
+## Documentation
+
+- [Contentstack Integration](CONTENTSTACK_INTEGRATION.md) - Setup and configuration guide for Contentstack CMS integration
