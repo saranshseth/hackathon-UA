@@ -1007,7 +1007,6 @@ export default function App() {
         searchQuery={searchQuery}
       />
       <IntrepidSection />
-      <Footer />
     </div>
   );
 }

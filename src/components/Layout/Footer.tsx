@@ -1,123 +1,224 @@
 "use client";
 
-import React from 'react';
-import { Button } from '@/components/ui/Button';
-import { Star, Shield, CreditCard } from 'lucide-react';
-import { TripAdvisorWidget } from '@/components/ui/TripAdvisorWidget';
+import React from "react";
+import { Button } from "@/components/ui/Button";
+import { TripAdvisorWidget } from "@/components/ui/TripAdvisorWidget";
+import { Phone, Mail, Globe, MapPin, Star, Users, Clock } from "lucide-react";
 
 export default function Footer() {
+  const popularTours = [
+    {
+      name: "Melbourne Booze Makes History Better",
+      duration: "3 hours",
+      rating: 4.9,
+    },
+    {
+      name: "Craft Beer Lovers' Guide to Melbourne",
+      duration: "4 hours",
+      rating: 4.8,
+    },
+    {
+      name: "Multicultural Markets of Melbourne Tour",
+      duration: "3.5 hours",
+      rating: 4.7,
+    },
+    {
+      name: "Melbourne: A Foodie's Guide to Root to Fruit",
+      duration: "4 hours",
+      rating: 4.9,
+    },
+    {
+      name: "Melbourne Bites & Sights (with Eureka Skydeck)",
+      duration: "5 hours",
+      rating: 4.8,
+    },
+  ];
+
+  const popularCities = [
+    { name: "Melbourne", tours: "25+ experiences" },
+    { name: "Bangkok", tours: "18+ experiences" },
+    { name: "Tokyo", tours: "22+ experiences" },
+    { name: "Paris", tours: "20+ experiences" },
+    { name: "Barcelona", tours: "15+ experiences" },
+    { name: "Istanbul", tours: "12+ experiences" },
+  ];
+
+  const tripCategories = [
+    "City Highlights",
+    "Food & Drink tours",
+    "Off The Beaten Path",
+    "Private Tours",
+    "Cultural Experiences",
+    "Cooking Classes",
+  ];
+  const aboutUsLinks = [
+    "Intrepid Urban Adventures",
+    "Responsible Travel",
+    "FAQs",
+    "Safe Space Policy",
+    "Booking Conditions",
+    "Privacy Policy",
+  ];
+
   return (
-    <footer className="bg-gray-900 text-white py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        {/* Trust Badges Section */}
-        <div className="mb-12 pb-8 border-b border-gray-800">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            {/* TripAdvisor Rating Widget */}
-            <div className="text-center md:text-left">
-              <TripAdvisorWidget 
-                overallRating={4.5}
-                totalReviews={1247}
-                className="justify-center md:justify-start"
-              />
-              <div className="mt-2">
-                <p className="text-xs text-green-400 hover:text-green-300 transition-colors">
-                  View all reviews →
-                </p>
+    <footer className="bg-white border-t border-gray-200 px-[0px] py-[21px]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 px-[28px] py-[54px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-8 mb-12">
+          {/* Contact Details */}
+          <div className="lg:col-span-3">
+            <div className="mb-6">
+              <div className="text-2xl font-bold text-red-600 mb-2">
+                intrepid
+              </div>
+              <div className="text-sm font-medium text-gray-900">
+                Urban Adventures
+              </div>
+              <div className="text-sm text-gray-600">Melbourne</div>
+            </div>
+
+            <div className="space-y-3">
+              <div className="flex items-center text-gray-700 text-sm">
+                <Phone className="h-4 w-4 mr-2 text-red-600" />
+                <span>+61 3 8672 6442</span>
+              </div>
+              <div className="flex items-start text-gray-700 text-sm">
+                <Mail className="h-4 w-4 mr-2 mt-0.5 text-red-600 flex-shrink-0" />
+                <span className="break-all">
+                  info@melbourneurbanadventures.com
+                </span>
+              </div>
+              <div className="flex items-start text-gray-700 text-sm">
+                <Globe className="h-4 w-4 mr-2 mt-0.5 text-red-600 flex-shrink-0" />
+                <span className="break-all">
+                  https://www.urbanadventures.com/melbourne
+                </span>
               </div>
             </div>
 
-            {/* Security Badge */}
-            <div className="text-center md:text-right">
-              <div className="flex items-center justify-center md:justify-end mb-2">
-                <Shield className="w-5 h-5 text-green-500 mr-2" />
-                <span className="text-sm font-semibold">Trusted & Secure</span>
+            <div className="mt-8">
+              <h4 className="font-semibold text-gray-900 mb-4">Contact Us</h4>
+              <div className="space-y-2 text-sm text-gray-700">
+                <div>
+                  <a href="#" className="hover:text-red-600 transition-colors">
+                    Contact Us
+                  </a>
+                </div>
+                <div>
+                  <a href="#" className="hover:text-red-600 transition-colors">
+                    Become an Agent
+                  </a>
+                </div>
+                <div>
+                  <a href="#" className="hover:text-red-600 transition-colors">
+                    Become an In Focus Partner
+                  </a>
+                </div>
               </div>
-              <p className="text-xs text-gray-400">
-                ATOL Protected • ABN: 12 345 678 901
-              </p>
-              <p className="text-xs text-gray-400">
-                Member of Australian Travel Industry
-              </p>
             </div>
           </div>
-        </div>
 
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
-          {/* Company Info */}
+          {/* About Us */}
           <div className="lg:col-span-2">
-            <h3 className="text-xl font-bold mb-4">Urban Adventures</h3>
-            <p className="text-gray-400 mb-4">
-              Best.Day.Ever. We're a network of local friends who create amazing day-long urban experiences. Our local experts show you their city's hidden gems and authentic culture.
-            </p>
-            <div className="flex space-x-4">
-              <a href="/about" className="text-gray-400 hover:text-white transition-colors">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                </svg>
-              </a>
-              <a href="/contact" className="text-gray-400 hover:text-white transition-colors">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987 6.62 0 11.987-5.367 11.987-11.987C24.014 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.611-3.132-1.551-.684-.94-.684-2.145 0-3.085.684-.94 1.835-1.551 3.132-1.551s2.448.611 3.132 1.551c.684.94.684 2.145 0 3.085-.684.94-1.835 1.551-3.132 1.551z"/>
-                </svg>
-              </a>
-              <a href="/blog" className="text-gray-400 hover:text-white transition-colors">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                </svg>
-              </a>
-            </div>
-          </div>
-
-          {/* Popular Destinations */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Popular Destinations</h4>
-            <ul className="space-y-2 text-gray-400">
-              <li><a href="/destinations/australia" className="hover:text-white transition-colors">Australia</a></li>
-              <li><a href="/destinations/japan" className="hover:text-white transition-colors">Japan</a></li>
-              <li><a href="/destinations/egypt" className="hover:text-white transition-colors">Egypt</a></li>
-              <li><a href="/destinations/vietnam" className="hover:text-white transition-colors">Vietnam</a></li>
-              <li><a href="/destinations/india" className="hover:text-white transition-colors">India</a></li>
-              <li><a href="/destinations/antarctica" className="hover:text-white transition-colors">Antarctica</a></li>
+            <h4 className="font-semibold text-gray-900 mb-4">About Us</h4>
+            <ul className="space-y-2">
+              {aboutUsLinks.map((link, index) => (
+                <li key={index}>
+                  <a
+                    href="#"
+                    className="text-gray-700 hover:text-red-600 transition-colors text-sm"
+                  >
+                    {link}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Travel Styles */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Experience Types</h4>
-            <ul className="space-y-2 text-gray-400">
-              <li><a href="/tours/walking" className="hover:text-white transition-colors">Walking Tours</a></li>
-              <li><a href="/tours/food" className="hover:text-white transition-colors">Food & Drink</a></li>
-              <li><a href="/tours/culture" className="hover:text-white transition-colors">Culture Tours</a></li>
-              <li><a href="/tours/local" className="hover:text-white transition-colors">Local Experiences</a></li>
-              <li><a href="/tours/photography" className="hover:text-white transition-colors">Photo Tours</a></li>
+          {/* Trip Categories */}
+          <div className="lg:col-span-2">
+            <h4 className="font-semibold text-gray-900 mb-4">
+              Trip categories
+            </h4>
+            <ul className="space-y-2">
+              {tripCategories.map((category, index) => (
+                <li key={index}>
+                  <a
+                    href="#"
+                    className="text-gray-700 hover:text-red-600 transition-colors text-sm"
+                  >
+                    {category}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Support */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Support</h4>
-            <ul className="space-y-2 text-gray-400">
-              <li><a href="/contact" className="hover:text-white transition-colors">Contact Us</a></li>
-              <li><a href="/booking-info" className="hover:text-white transition-colors">Booking Information</a></li>
-              <li><a href="/travel-insurance" className="hover:text-white transition-colors">Travel Insurance</a></li>
-              <li><a href="/responsible-travel" className="hover:text-white transition-colors">Responsible Travel</a></li>
-              <li><a href="/about" className="hover:text-white transition-colors">About Us</a></li>
+          {/* Popular Cities */}
+          <div className="lg:col-span-2 mx-[0px] m-[0px] mx-[16px] my-[0px]">
+            <h4 className="font-semibold text-gray-900 mb-4">Visit Next</h4>
+            <ul className="space-y-2">
+              {popularCities.map((city, index) => (
+                <li key={index}>
+                  <a
+                    href="#"
+                    className="block text-gray-700 hover:text-red-600 transition-colors"
+                  >
+                    <div className="text-sm font-medium">{city.name}</div>
+                    <div className="text-xs text-gray-500">{city.tours}</div>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Popular Tours */}
+          <div className="lg:col-span-3 mx-[-24px] my-[0px] my-[0px] px-[-12px] py-[0px] my-[0px] my-[0px] my-[0px]">
+            <h4 className="font-semibold text-gray-900 mb-4">
+              Popular experiences
+            </h4>
+            <ul className="space-y-3">
+              {popularTours.map((tour, index) => (
+                <li key={index}>
+                  <a
+                    href="#"
+                    className="block text-gray-700 hover:text-red-600 transition-colors"
+                  >
+                    <div className="text-sm font-medium mb-1 line-clamp-2 leading-tight">
+                      {tour.name}
+                    </div>
+                    <div className="flex items-center text-xs text-gray-500 space-x-4">
+                      <div className="flex items-center">
+                        <Clock className="h-3 w-3 mr-1" />
+                        {tour.duration}
+                      </div>
+                      <div className="flex items-center">
+                        <Star className="h-3 w-3 mr-1 fill-yellow-400 text-yellow-400" />
+                        {tour.rating}
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
 
-        {/* Legal and Copyright */}
-        <div className="pt-8 border-t border-gray-800">
-          <div className="flex flex-col lg:flex-row justify-between items-center">
-            <div className="text-gray-400 text-sm mb-4 lg:mb-0">
-              © 2024 Urban Adventures. All rights reserved. ABN 12 345 678 901 • Licensed Travel Agent
+        {/* Bottom Bar */}
+        <div className="border-t border-gray-200 pt-6">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="text-sm text-gray-600 mb-4 md:mb-0">
+              © 2024 Intrepid Urban Adventures. All rights reserved.
             </div>
-            
-            <div className="flex items-center space-x-6 text-sm text-gray-400">
-              <a href="/terms" className="hover:text-white transition-colors">Terms & Conditions</a>
-              <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
-              <a href="/accessibility" className="hover:text-white transition-colors">Accessibility</a>
+            <div className="flex space-x-6">
+              <a href="#" className="text-sm text-gray-600 hover:text-red-600">
+                Terms of Service
+              </a>
+              <a href="#" className="text-sm text-gray-600 hover:text-red-600">
+                Privacy Policy
+              </a>
+              <a href="#" className="text-sm text-gray-600 hover:text-red-600">
+                Cookie Policy
+              </a>
             </div>
           </div>
         </div>
