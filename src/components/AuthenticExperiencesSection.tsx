@@ -14,7 +14,7 @@ import { useCurrency } from '@/contexts/CurrencyContext';
 const intrepidDestinations = [
   {
     id: "australia-intrepid",
-    name: "Australia Outback Explorer",
+    name: "Great Barrier Reef & Sydney",
     destinationName: "Sydney",
     destinationCountry: "Australia",
     countryCode: "AU",
@@ -24,28 +24,11 @@ const intrepidDestinations = [
     rating: 4.8,
     reviewCount: 523,
     categories: ["Adventure"],
-    images: { hero: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=800&fit=crop&q=80" },
-    overview: "Red centre, coastal adventures and unique wildlife",
+    images: { hero: "https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?w=1200&h=800&fit=crop&q=80" },
+    overview: "Iconic Opera House, pristine beaches and reef diving",
     intrepidUrl: "https://www.intrepidtravel.com/au/australia",
     size: "large",
     isUserCountry: true
-  },
-  {
-    id: "japan-intrepid",
-    name: "Japan Real Food Adventure",
-    destinationName: "Tokyo",
-    destinationCountry: "Japan",
-    countryCode: "JP",
-    duration: "14 days",
-    pricing: { adult: 3299 },
-    currency: "AUD",
-    rating: 4.9,
-    reviewCount: 312,
-    categories: ["Cultural"],
-    images: { hero: "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=1200&h=800&fit=crop&q=80" },
-    overview: "Traditional temples, authentic cuisine, and local artisans",
-    intrepidUrl: "https://www.intrepidtravel.com/au/japan",
-    size: "medium"
   },
   {
     id: "egypt-intrepid",
@@ -59,10 +42,44 @@ const intrepidDestinations = [
     rating: 4.7,
     reviewCount: 445,
     categories: ["Cultural"],
-    images: { hero: "https://images.unsplash.com/photo-1539650116574-75c0c6d73c0e?w=1200&h=800&fit=crop&q=80" },
-    overview: "Ancient wonders and Nile river adventures",
+    images: { hero: "https://images.unsplash.com/photo-1539650116574-8f9b9de69264?w=1200&h=800&fit=crop&q=80" },
+    overview: "Ancient pyramids, Sphinx and Nile river cruise",
     intrepidUrl: "https://www.intrepidtravel.com/au/egypt",
     size: "medium"
+  },
+  {
+    id: "vietnam-intrepid",
+    name: "Vietnam Street Food Tour",
+    destinationName: "Hanoi",
+    destinationCountry: "Vietnam",
+    countryCode: "VN",
+    duration: "12 days",
+    pricing: { adult: 1599 },
+    currency: "AUD",
+    rating: 4.8,
+    reviewCount: 367,
+    categories: ["Food & Drink"],
+    images: { hero: "https://images.unsplash.com/photo-1555921015-5532091f6026?w=1200&h=800&fit=crop&q=80" },
+    overview: "Ha Long Bay, street food and cultural immersion",
+    intrepidUrl: "https://www.intrepidtravel.com/au/vietnam",
+    size: "medium"
+  },
+  {
+    id: "italy-intrepid",
+    name: "Best of Italy",
+    destinationName: "Rome",
+    destinationCountry: "Italy",
+    countryCode: "IT",
+    duration: "15 days",
+    pricing: { adult: 3299 },
+    currency: "AUD",
+    rating: 4.9,
+    reviewCount: 412,
+    categories: ["Cultural"],
+    images: { hero: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?w=1200&h=800&fit=crop&q=80" },
+    overview: "Colosseum, Venice canals and Tuscan countryside",
+    intrepidUrl: "https://www.intrepidtravel.com/au/italy",
+    size: "small"
   },
   {
     id: "antarctica-intrepid",
@@ -76,43 +93,26 @@ const intrepidDestinations = [
     rating: 4.9,
     reviewCount: 156,
     categories: ["Adventure"],
-    images: { hero: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&h=800&fit=crop&q=80" },
-    overview: "Ultimate polar expedition with wildlife encounters",
+    images: { hero: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&h=800&fit=crop&q=80" },
+    overview: "Penguins, icebergs and polar expedition",
     intrepidUrl: "https://www.intrepidtravel.com/au/antarctica",
     size: "small"
   },
   {
-    id: "vietnam-intrepid",
-    name: "Vietnam Real Food Adventure",
-    destinationName: "Ho Chi Minh City",
-    destinationCountry: "Vietnam",
-    countryCode: "VN",
-    duration: "12 days",
-    pricing: { adult: 1599 },
-    currency: "AUD",
-    rating: 4.8,
-    reviewCount: 367,
-    categories: ["Food & Drink"],
-    images: { hero: "https://images.unsplash.com/photo-1559592413-7cec4d0d2638?w=1200&h=800&fit=crop&q=80" },
-    overview: "Street food and cultural immersion",
-    intrepidUrl: "https://www.intrepidtravel.com/au/vietnam",
-    size: "small"
-  },
-  {
-    id: "india-intrepid",
-    name: "Golden Triangle & Beyond",
-    destinationName: "Delhi",
-    destinationCountry: "India",
-    countryCode: "IN",
-    duration: "15 days",
-    pricing: { adult: 2499 },
+    id: "morocco-intrepid",
+    name: "Morocco Kasbahs & Desert",
+    destinationName: "Marrakech",
+    destinationCountry: "Morocco",
+    countryCode: "MA",
+    duration: "8 days",
+    pricing: { adult: 1899 },
     currency: "AUD",
     rating: 4.7,
-    reviewCount: 445,
-    categories: ["Cultural"],
-    images: { hero: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&h=800&fit=crop&q=80" },
-    overview: "Palaces, temples and vibrant culture",
-    intrepidUrl: "https://www.intrepidtravel.com/au/india",
+    reviewCount: 289,
+    categories: ["Adventure"],
+    images: { hero: "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&h=800&fit=crop&q=80" },
+    overview: "Sahara desert camping and ancient medinas",
+    intrepidUrl: "https://www.intrepidtravel.com/au/morocco",
     size: "large"
   }
 ];
@@ -125,38 +125,24 @@ export function AuthenticExperiencesSection() {
   useEffect(() => {
     async function loadTrips() {
       try {
-        const products = await clientDataProvider.getAllProducts();
-        if (products.length > 0) {
-          // Use real data and add size property for bento layout
-          let selectedTrips = products
-            .filter(product => product.reviewCount > 0)
-            .sort((a, b) => b.rating - a.rating || b.reviewCount - a.reviewCount)
-            .slice(0, 6)
-            .map((trip, index) => ({
-              ...trip,
-              size: index === 0 || index === 5 ? 'large' : index === 1 || index === 3 ? 'medium' : 'small'
-            }));
-          setTrips(selectedTrips as EnhancedProduct[]);
-        } else {
-          // Use Intrepid destinations and prioritize user's country
-          let arrangedDestinations = [...intrepidDestinations];
+        // Always use our curated Intrepid destinations for the bento grid
+        let arrangedDestinations = [...intrepidDestinations];
+        
+        // If we have user location, prioritize their country as the first large card
+        if (userLocation?.country) {
+          const userCountryDestination = arrangedDestinations.find(dest => 
+            dest.countryCode === userLocation.countryCode || 
+            dest.destinationCountry.toLowerCase() === userLocation.country.toLowerCase()
+          );
           
-          // If we have user location, prioritize their country as the first large card
-          if (userLocation?.country) {
-            const userCountryDestination = arrangedDestinations.find(dest => 
-              dest.countryCode === userLocation.countryCode || 
-              dest.destinationCountry.toLowerCase() === userLocation.country.toLowerCase()
-            );
-            
-            if (userCountryDestination) {
-              // Remove user's country from array and put it first
-              arrangedDestinations = arrangedDestinations.filter(dest => dest.id !== userCountryDestination.id);
-              arrangedDestinations.unshift({...userCountryDestination, size: 'large'});
-            }
+          if (userCountryDestination) {
+            // Remove user's country from array and put it first
+            arrangedDestinations = arrangedDestinations.filter(dest => dest.id !== userCountryDestination.id);
+            arrangedDestinations.unshift({...userCountryDestination, size: 'large'});
           }
-          
-          setTrips(arrangedDestinations as EnhancedProduct[]);
         }
+        
+        setTrips(arrangedDestinations as EnhancedProduct[]);
       } catch (error) {
         console.error('Error loading trips:', error);
         setTrips(intrepidDestinations as EnhancedProduct[]);

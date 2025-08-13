@@ -11,7 +11,9 @@
   "dependencies": {
     "@auth/core": "^0.34.2",
     "@mapbox/mapbox-gl-geocoder": "^5.0.1",
+    "@radix-ui/react-accordion": "^1.2.11",
     "@radix-ui/react-slot": "^1.2.3",
+    "@radix-ui/react-tabs": "^1.1.12",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
@@ -22,7 +24,7 @@
     "embla-carousel-autoplay": "^8.6.0",
     "embla-carousel-react": "^8.6.0",
     "lucide-react": "^0.294.0",
-    "mapbox-gl": "^3.0.1",
+    "mapbox-gl": "^3.14.0",
     "next": "14.0.4",
     "next-auth": "^4.24.11",
     "postcss": "^8",
@@ -33,7 +35,7 @@
     "typescript": "^5"
   },
   "devDependencies": {
-    "@types/mapbox-gl": "^2.7.19",
+    "@types/mapbox-gl": "^2.7.21",
     "eslint": "^8",
     "eslint-config-next": "14.0.4"
   }

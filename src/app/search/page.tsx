@@ -45,7 +45,7 @@ function SearchContent() {
         setAllProducts(products);
         
         // Extract unique countries
-        const uniqueCountries = [...new Set(products.map(p => p.destinationCountry))].sort();
+        const uniqueCountries = Array.from(new Set(products.map(p => p.destinationCountry))).sort();
         setCountries(uniqueCountries);
       } catch (error) {
         console.error('Error loading products:', error);

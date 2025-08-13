@@ -341,7 +341,7 @@ export function HeroSection({ onSearch, onFilterChange }: HeroSectionProps) {
           </div>
 
           {/* Right Column - Melbourne Trip Carousel */}
-          <div className="flex items-center justify-center w-full overflow-hidden">
+          <div className="flex items-center justify-center w-full">
             <div className="w-full max-w-lg lg:max-w-none">
               <MelbourneTripCarousel />
             </div>

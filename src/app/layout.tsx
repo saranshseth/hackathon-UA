@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import AuthProvider from '@/components/Auth/AuthProvider'
 import { CurrencyProvider } from '@/contexts/CurrencyContext'
 import Footer from '@/components/Layout/Footer'
+import { TripRecommendationChatbot } from '@/components/TripRecommendationChatbot'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -24,6 +25,7 @@ export default function RootLayout({
           <CurrencyProvider>
             {children}
             <Footer />
+            <TripRecommendationChatbot />
           </CurrencyProvider>
         </AuthProvider>
       </body>
