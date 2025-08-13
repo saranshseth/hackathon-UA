@@ -506,7 +506,7 @@ function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content Section */}
           <div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6 uppercase tracking-tight">
+            <h1 className="text-5xl font-medium text-gray-900 pt-6">
               Food & Drink
             </h1>
             <div className="max-w-md mb-12">
@@ -552,11 +552,11 @@ function HeroSection() {
             </h2>
 
             <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-lg group">
-              {/* <ImageWithFallback
+              <img
                 src={currentExperience.image}
                 alt="Food & drink experiences around the world"
                 className="w-full h-full object-cover transition-opacity duration-500"
-              /> */}
+              />
 
               {/* Overlay Content */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-lg px-[0px] p-[0px] m-[0px]">
@@ -643,11 +643,11 @@ function ExperienceCard({ experience }: { experience: Experience }) {
     <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow border border-gray-100">
       <div className="relative group">
         <div className="aspect-[4/3] overflow-hidden">
-          {/* <ImageWithFallback
+          <img
             src={experience.images[currentImageIndex]}
             alt={experience.title}
             className="w-full h-full object-cover transition-opacity duration-300"
-          /> */}
+          />
         </div>
 
         {/* Navigation arrows */}
@@ -681,10 +681,10 @@ function ExperienceCard({ experience }: { experience: Experience }) {
           </>
         )}
 
-        {/* Heart icon - top left */}
+        {/* Heart icon - top right */}
         <button
           onClick={() => setIsWishlisted(!isWishlisted)}
-          className="absolute top-3 left-3 p-2 bg-white rounded-full shadow-sm hover:bg-gray-50 transition-colors z-10"
+          className="absolute top-3 right-3 p-2 bg-white rounded-full shadow-sm hover:bg-gray-50 transition-colors z-10"
         >
           <Heart
             className={`h-4 w-4 ${
@@ -745,7 +745,7 @@ function ExperienceCard({ experience }: { experience: Experience }) {
             </div>
           </div>
 
-          <Button className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded font-medium text-sm">
+          <Button className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-full font-medium text-sm">
             Book now
           </Button>
         </div>
