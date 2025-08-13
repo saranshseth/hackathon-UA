@@ -1,6 +1,5 @@
-"use client";
-
 import React, { useState } from "react";
+import { mockTrips } from "@/lib/mockData";
 import {
   Star,
   Clock,
@@ -44,6 +43,14 @@ import PriceDisplay from "@/components/Currency/PriceDisplay";
 interface ProductPageProps {
   params: { id: string };
 }
+
+export async function generateStaticParams() {
+  return mockTrips.map((trip) => ({
+    id: trip.id,
+  }));
+}
+
+"use client";
 
 export default function ProductPage({ params }: ProductPageProps) {
   const [selectedImage, setSelectedImage] = useState(0);
