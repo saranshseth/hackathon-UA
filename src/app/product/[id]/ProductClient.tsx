@@ -73,3 +73,4 @@ export default function ProductClient({ params }: ProductClientProps) {
   // All the rest of the component logic would go here...
   // For brevity, I'll add a placeholder return
   return <div>Product Client Component - ID: {params.id}</div>;
+}
