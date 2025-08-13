@@ -388,7 +388,7 @@ export class EnhancedDataProvider {
   private loadData() {
     try {
       // Load products
-      const productsPath = path.join(process.cwd(), 'src/csv/UA-Product.csv');
+      const productsPath = path.join(process.cwd(), 'public/csv/UA-Product.csv');
       if (fs.existsSync(productsPath)) {
         const productsContent = fs.readFileSync(productsPath, 'utf-8');
         const rawProducts = parse(productsContent, { columns: true, skip_empty_lines: true });
@@ -396,7 +396,7 @@ export class EnhancedDataProvider {
       }
 
       // Load destinations
-      const destinationsPath = path.join(process.cwd(), 'src/csv/UA-destination.csv');
+      const destinationsPath = path.join(process.cwd(), 'public/csv/UA-destination.csv');
       if (fs.existsSync(destinationsPath)) {
         const destinationsContent = fs.readFileSync(destinationsPath, 'utf-8');
         const rawDestinations = parse(destinationsContent, { columns: true, skip_empty_lines: true });
@@ -404,7 +404,7 @@ export class EnhancedDataProvider {
       }
 
       // Load categories
-      const categoriesPath = path.join(process.cwd(), 'src/csv/UA-category.csv');
+      const categoriesPath = path.join(process.cwd(), 'public/csv/UA-category.csv');
       if (fs.existsSync(categoriesPath)) {
         const categoriesContent = fs.readFileSync(categoriesPath, 'utf-8');
         const rawCategories = parse(categoriesContent, { columns: true, skip_empty_lines: true });
@@ -412,7 +412,7 @@ export class EnhancedDataProvider {
       }
 
       // Load reviews
-      const reviewsPath = path.join(process.cwd(), 'src/csv/UA-reviews.csv');
+      const reviewsPath = path.join(process.cwd(), 'public/csv/UA-reviews.csv');
       if (fs.existsSync(reviewsPath)) {
         const reviewsContent = fs.readFileSync(reviewsPath, 'utf-8');
         const rawReviews = parse(reviewsContent, { columns: true, skip_empty_lines: true });

@@ -69,7 +69,16 @@ export function PopularToursSection() {
     loadPopularTours();
   }, []);
 
-  // Remove auto-play functionality per user request
+  // Auto-play functionality - rotates every 4 seconds
+  useEffect(() => {
+    if (popularTours.length <= 1) return;
+    
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % popularTours.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [popularTours.length]);
 
   // Check for mobile screen size
   useEffect(() => {
