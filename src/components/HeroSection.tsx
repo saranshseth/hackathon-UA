@@ -334,7 +334,10 @@ export function HeroSection({ onSearch, onFilterChange }: HeroSectionProps) {
 
             {/* CTA Button - Removed Watch Video */}
             <div>
-              <Button className="bg-[#FF2828] hover:bg-[#E61E1E] text-white px-6 sm:px-8 py-3 lg:py-4 rounded-xl shadow-lg shadow-[#FF2828]/25 hover:shadow-xl hover:shadow-[#FF2828]/30 transition-all duration-300">
+              <Button
+                className="bg-[#FF2828] hover:bg-[#E61E1E] text-white px-6 sm:px-8 py-3 lg:py-4 rounded-xl shadow-lg shadow-[#FF2828]/25 hover:shadow-xl hover:shadow-[#FF2828]/30 transition-all duration-300"
+                href="/destinations"
+              >
                 Discover more
               </Button>
             </div>
