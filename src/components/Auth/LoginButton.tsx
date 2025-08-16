@@ -5,8 +5,8 @@ import { Button } from '@/components/ui/Button';
 import { User, LogOut } from 'lucide-react';
 
 interface LoginButtonProps {
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
-  size?: 'sm' | 'md' | 'lg';
+  variant?: 'default' | 'secondary' | 'outline' | 'ghost';
+  size?: 'default' | 'sm' | 'lg' | 'icon';
 }
 
 export default function LoginButton({ variant = 'outline', size = 'sm' }: LoginButtonProps) {

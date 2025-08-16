@@ -328,7 +328,7 @@ export function HeroSection({ onSearch, onFilterChange }: HeroSectionProps) {
               <p className="text-lg lg:text-xl text-gray-600 leading-relaxed font-light">
                 Discover authentic experiences with small groups of{" "}
                 <br className="hidden sm:block" />
-                like-minded travelers in Australia's cultural capital
+                like-minded travelers in Australia&apos;s cultural capital
               </p>
             </div>
 

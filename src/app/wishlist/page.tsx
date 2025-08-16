@@ -123,7 +123,7 @@ export default function WishlistPage() {
                   <CardContent>
                     <div className="flex items-center justify-between mb-4">
                       {trip.badges.length > 0 && (
-                        <Badge badge={trip.badges[0]} />
+                        <Badge>{trip.badges[0]}</Badge>
                       )}
                       <span className="text-brand-primary-intrepid-red font-bold text-lg">
                         {formatPrice(trip.price)}

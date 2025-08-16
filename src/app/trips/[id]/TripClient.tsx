@@ -109,7 +109,7 @@ export default function TripClient({ id }: TripClientProps) {
           "Conservatory displays",
           "Tree-lined pathways",
         ],
-        whatToExpected:
+        whatToExpect:
           "Stroll through Melbourne's most beautiful formal gardens, featuring English elm trees and Victorian-era landscaping.",
         tips: "Great for photos. Benches available for rest breaks.",
       },
@@ -166,7 +166,7 @@ export default function TripClient({ id }: TripClientProps) {
           "Cultural exchange",
           "Tour recap",
         ],
-        whatToExpected:
+        whatToExpect:
           "End your tour with a visit to a local craft brewery where you can sample Melbourne's renowned beer culture and reflect on your journey.",
         tips: "Non-alcoholic options available. Great place to ask final questions.",
       },
@@ -186,7 +186,7 @@ export default function TripClient({ id }: TripClientProps) {
           "Photo opportunities",
           "Optional extensions",
         ],
-        whatToExpected:
+        whatToExpect:
           "Your guide will provide personalized recommendations for exploring Melbourne further, plus great photo opportunities at this iconic intersection.",
         tips: "Perfect spot to continue exploring on your own. Many restaurants and bars nearby.",
       },

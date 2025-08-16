@@ -268,7 +268,7 @@ export default function MelbourneExplorer() {
                 <br />
                 <span className="text-4xl">Melbourne</span>
               </h1>
-              <Button variant="primary" size="lg" className="rounded-full px-8">
+              <Button variant="default" size="lg" className="rounded-full px-8">
                 View more
               </Button>
             </div>

@@ -120,10 +120,10 @@ const MapboxMap: React.FC<MapboxMapProps> = ({
           closeButton: false,
           closeOnClick: false
         }).setHTML(`
-          <div class="p-2">
-            <h4 class="font-semibold text-sm">${stop.title}</h4>
-            <p class="text-xs text-gray-600">${stop.address}</p>
-            ${stop.duration ? `<p class="text-xs text-blue-600 mt-1">${stop.duration}</p>` : ''}
+          <div class=${'"'}p-2${'"'}>
+            <h4 class=${'"'}font-semibold text-sm${'"'}>${stop.title}</h4>
+            <p class=${'"'}text-xs text-gray-600${'"'}>${stop.address}</p>
+            ${stop.duration ? `<p class=${'"'}text-xs text-blue-600 mt-1${'"'}>${stop.duration}</p>` : ''}
           </div>
         `);
 

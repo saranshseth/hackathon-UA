@@ -256,7 +256,7 @@ export default function ExploreMelbourneSection() {
                 Melbourne
               </span>
             </h1>
-            <Button variant="primary" size="lg" className="!rounded-full px-8">
+            <Button variant="default" size="lg" className="!rounded-full px-8">
               Learn more
               <ChevronRight className="ml-4 w-4 h-4" />
             </Button>

@@ -492,8 +492,11 @@ export default function ProductClient({ id }: ProductClientProps) {
                         <MapboxMap
                           stops={[
                             {
-                              name: "Meeting Point",
-                              description: experience.meetingPoint.address,
+                              number: 1,
+                              title: "Meeting Point",
+                              address: experience.meetingPoint.address,
+                              duration: "",
+                              description: experience.meetingPoint.instructions,
                               coordinates: experience.meetingPoint.coordinates as [number, number],
                             },
                           ]}
@@ -733,11 +736,11 @@ export default function ProductClient({ id }: ProductClientProps) {
                   <div className="mb-4">
                     <div className="flex items-baseline gap-2 mb-1">
                       <span className="text-3xl font-bold">
-                        <PriceDisplay amount={experience.price} />
+                        <PriceDisplay price={experience.price} />
                       </span>
                       {experience.originalPrice && (
                         <span className="text-lg text-gray-400 line-through">
-                          <PriceDisplay amount={experience.originalPrice} />
+                          <PriceDisplay price={experience.originalPrice} />
                         </span>
                       )}
                     </div>
@@ -824,7 +827,7 @@ export default function ProductClient({ id }: ProductClientProps) {
                           </div>
                           <div className="flex items-baseline gap-1 mt-1">
                             <span className="font-semibold text-sm">
-                              <PriceDisplay amount={exp.price} />
+                              <PriceDisplay price={exp.price} />
                             </span>
                             <span className="text-xs text-gray-500">/ {exp.duration}</span>
                           </div>
@@ -886,13 +889,13 @@ export default function ProductClient({ id }: ProductClientProps) {
                 <div className="flex justify-between mb-2">
                   <span>Subtotal</span>
                   <span>
-                    <PriceDisplay amount={experience.price} />
+                    <PriceDisplay price={experience.price} />
                   </span>
                 </div>
                 <div className="flex justify-between font-bold">
                   <span>Total</span>
                   <span>
-                    <PriceDisplay amount={experience.price} />
+                    <PriceDisplay price={experience.price} />
                   </span>
                 </div>
               </div>

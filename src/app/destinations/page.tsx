@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import {
   Heart,
   User,
@@ -551,11 +552,12 @@ function HeroSection() {
               Explore our most popular experiences
             </h2>
 
-            <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-lg group">
-              <img
+            <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-lg group relative">
+              <Image
                 src={currentExperience.image}
                 alt="Food & drink experiences around the world"
-                className="w-full h-full object-cover transition-opacity duration-500"
+                fill
+                className="object-cover transition-opacity duration-500"
               />
 
               {/* Overlay Content */}
@@ -642,11 +644,12 @@ function ExperienceCard({ experience }: { experience: Experience }) {
   return (
     <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow border border-gray-100">
       <div className="relative group">
-        <div className="aspect-[4/3] overflow-hidden">
-          <img
+        <div className="aspect-[4/3] overflow-hidden relative">
+          <Image
             src={experience.images[currentImageIndex]}
             alt={experience.title}
-            className="w-full h-full object-cover transition-opacity duration-300"
+            fill
+            className="object-cover transition-opacity duration-300"
           />
         </div>
 
@@ -770,8 +773,8 @@ function ExperiencesGrid({
             {searchQuery.trim() ? (
               <>
                 <span className="font-medium">{experiences.length}</span>{" "}
-                experience{experiences.length !== 1 ? "s" : ""} found for "
-                {searchQuery}"
+                experience{experiences.length !== 1 ? "s" : ""} found for {'"'}
+                {searchQuery}{'"'}
               </>
             ) : (
               <>

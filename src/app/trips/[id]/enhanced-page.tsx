@@ -25,9 +25,9 @@ import {
   Activity,
   TrendingUp,
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/Button";
+import { Badge } from "@/components/ui/Badge";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Accordion,
@@ -308,7 +308,7 @@ const EnhancedTripPage: React.FC<TripPageProps> = ({ params }) => {
           <p className="text-gray-700 leading-relaxed">
             This is in our top 5% of reviewed trips and is in our{" "}
             <span className="font-semibold text-blue-600">
-              "Best tours in Australia"
+              {'"'}Best tours in Australia{'"'}
             </span>
             . Our tour leaders have also won{" "}
             <span className="font-semibold text-blue-600">
@@ -516,12 +516,12 @@ const EnhancedTripPage: React.FC<TripPageProps> = ({ params }) => {
                   <div>
                     <h3 className="text-xl font-semibold mb-4">About</h3>
                     <p className="text-gray-700 leading-relaxed">
-                      Take the guesswork out of exploring Melbourne's food and
+                      Take the guesswork out of exploring Melbourne&apos;s food and
                       cafe culture on this street food tour of the inner North
                       suburbs. Follow your local guide as they show you great
                       places to get coffee and food in the lively suburbs of
                       Fitzroy and Collingwood. Discover hidden gems, learn about
-                      Melbourne's cultural history, and taste authentic local
+                      Melbourne&apos;s cultural history, and taste authentic local
                       flavors.
                     </p>
                   </div>
@@ -727,7 +727,7 @@ const EnhancedTripPage: React.FC<TripPageProps> = ({ params }) => {
 
                   <div>
                     <h3 className="text-xl font-semibold mb-4">
-                      What's Included
+                      What&apos;s Included
                     </h3>
                     <ul className="space-y-2 text-gray-700">
                       <li className="flex items-center space-x-2">
@@ -784,7 +784,7 @@ const EnhancedTripPage: React.FC<TripPageProps> = ({ params }) => {
                       Still have questions?
                     </h4>
                     <p className="text-gray-700 mb-4">
-                      Can't find the answer you're looking for? Our friendly
+                      Can&apos;t find the answer you&apos;re looking for? Our friendly
                       customer support team is here to help.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4">

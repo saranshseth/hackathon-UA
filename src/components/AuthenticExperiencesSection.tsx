@@ -142,10 +142,10 @@ export function AuthenticExperiencesSection() {
           }
         }
         
-        setTrips(arrangedDestinations as EnhancedProduct[]);
+        setTrips(arrangedDestinations as unknown as EnhancedProduct[]);
       } catch (error) {
         console.error('Error loading trips:', error);
-        setTrips(intrepidDestinations as EnhancedProduct[]);
+        setTrips(intrepidDestinations as unknown as EnhancedProduct[]);
       } finally {
         setLoading(false);
       }
