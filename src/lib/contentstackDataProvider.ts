@@ -420,7 +420,12 @@ export function createDataProvider(): UnifiedDataProvider {
 
   return new UnifiedDataProvider({
     dataSource: hasContentstackConfig ? 'contentstack' : 'csv',
-    contentstackConfig: hasContentstackConfig ? contentstackConfig : undefined,
+    contentstackConfig: hasContentstackConfig ? {
+      apiKey: contentstackConfig.apiKey!,
+      deliveryToken: contentstackConfig.deliveryToken!,
+      environment: contentstackConfig.environment,
+      region: contentstackConfig.region,
+    } : undefined,
   });
 }
 

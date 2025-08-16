@@ -183,4 +183,3 @@ class LocationService {
 }
 
 export const locationService = new LocationService();
-export type { LocationData };

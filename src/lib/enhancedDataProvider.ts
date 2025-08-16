@@ -109,7 +109,7 @@ class IntelligentPricingEngine {
     let basePrice = this.getBasePriceByDestination(product.destinationCountry);
     
     // Apply continental factor
-    const continentFactor = this.baseFactors.destination[product.destinationContinent] || 1.0;
+    const continentFactor = this.baseFactors.destination[product.destinationContinent as keyof typeof this.baseFactors.destination] || 1.0;
     basePrice *= continentFactor;
     
     // Apply category factors
@@ -209,7 +209,7 @@ class IntelligentPricingEngine {
     
     let factor = 1.0;
     categories.forEach(category => {
-      const categoryFactor = this.baseFactors.category[category];
+      const categoryFactor = this.baseFactors.category[category as keyof typeof this.baseFactors.category];
       if (categoryFactor) {
         factor *= categoryFactor;
       }
@@ -359,7 +359,7 @@ class ImageProvider {
     }
     
     // Remove duplicates and ensure we have at least one image
-    images = [...new Set(images)];
+    images = Array.from(new Set(images));
     
     if (images.length === 0) {
       // Fallback image
