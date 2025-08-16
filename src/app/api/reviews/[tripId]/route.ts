@@ -3,10 +3,11 @@ import { mockReviews } from '@/lib/mockData';
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { tripId: string } }
+  { params }: { params: Promise<{ tripId: string }> }
 ) {
   try {
-    const tripReviews = mockReviews.filter(review => review.tripId === params.tripId);
+    const { tripId } = await params;
+    const tripReviews = mockReviews.filter(review => review.tripId === tripId);
     
     // Calculate review summary
     const totalReviews = tripReviews.length;
